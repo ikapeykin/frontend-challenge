@@ -1,25 +1,18 @@
-/*https://codepen.io/fskirschbaum/pen/vKChz*/
-
-.statusBar {
+#testStatus {
     position: relative;
-    display: block;
-    height: 80px;
+    width: auto;
+    height: 140px;
     left: 40px;
 }
 
-.statusBarList .statusBarElement {
-    list-style: none;
-}
-
-.statusBarElement {
+.testStatus li {
     position: relative;
     text-indent: 30px;
     height: 140px;
-    width: 120px;
     background-color: #767676;
+    display: inline-block;
     zoom: 1;
-    display: inline;
-    margin-left: 30px;
+    *display: inline;
     padding: 10px 10px 10px 30px;
     color: white;
     font-size: 18px;
@@ -27,7 +20,11 @@
     line-height: 150px;
 }
 
-.firstBarElement:after .secondBarElement:after .thirdBarElement:after {
+ul.testStatus {
+    list-style: none;
+}
+
+li.testStatus:first-child:after, li.testStatusGood:after, li.testStatusNoGood:after {
     content: "";
     position: absolute;
     width: 0;
@@ -35,10 +32,22 @@
     border-top: 80px solid transparent;
     border-left: 30px solid #767676;
     border-bottom: 80px solid transparent;
-    margin: -10px 90px 0 10px;
+    margin: -10px 90px 0 10px; 
 }
 
-.lastBarElement:before .secondBarElement:before .thirdBarElement:before {
+/*li.testStatus:last-child:before, li.testStatusNoGood:before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    left: 0;*/
+/*    border-top: 80px solid transparent;*/
+/*    border-left: 30px solid white;*/
+/*    border-bottom: 80px solid transparent;*/
+/*    margin: -10px 0px 0 0px; */
+/*}*/
+
+li.testStatusNoGood:before {
     content: "";
     position: absolute;
     width: 0;
@@ -50,27 +59,19 @@
     margin: -10px 0px 0 0px;
 }
 
-.firstBarElement {
+li.testStatus:first-child {
     padding-left: 10px;
     margin-left: 0;
 }
 
-.lastBarElement {
+li.testStatus:last-child {
     padding-right: 30px;
 }
 
-.secondBarElement {
-    background-color: #77a942;
-}
-
-.secondBarElement:after {
-    border-left: 30px solid #77a942;
-}
-
-.thirdBarElement {
+li.testStatusNoGood {
     background-color: #c42c00;
 }
 
-.thirdBarElementLafter {
+li.testStatusNoGood:after {
     border-left: 30px solid #c42c00;
 }
