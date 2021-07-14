@@ -18,5 +18,9 @@ export const postEmployer = (user: CreateUser) => {
 }
 
 export const pathEmployer = (user: UpdateUser) => {
-    return "ok";
+    const userIndex: number = usersMockData.findIndex(userMock => userMock.id === user.id);
+
+    if (userIndex) {
+        usersMockData[userIndex].status = user.status;
+    }
 }

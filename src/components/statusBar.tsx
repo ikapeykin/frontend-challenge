@@ -1,22 +1,47 @@
-import React from "react";
-import {Status} from "../model/status";
+import React, {useState} from "react";
+import {Status, statusValues} from "../model/status";
+import {pathEmployer} from "../api/mocked";
 import "./statusBar.css";
+import {User, UserModel, UpdateUser} from "../model/user";
 
-interface StatusBarProps {
-    status: Status
+
+interface StatusBarElementProps {
+    user: User;
+    targetStatus: string;
 }
 
-export const StatusBar = ({status}: StatusBarProps) => {
-    console.log(Status[status]);
+const updateUserStatus = (user: User, targetStatus: string) => {
+    if (Status[user.status] !== targetStatus) {
+        const userData: UpdateUser = {
+            id: user.id,
+            status: Status[targetStatus as keyof typeof Status],
+        }
+        pathEmployer(userData);
+    }
+}
+
+const StatusBarElement = ({user, targetStatus}: StatusBarElementProps) => {
+    return  (
+        <li>
+            <a
+                href="#"
+                className={Status[user.status] === targetStatus ? "active" : ""}
+                onClick={() => updateUserStatus(user, targetStatus)}
+            >{targetStatus}</a>
+        </li>
+    )
+}
+
+
+export const StatusBar = ({user}: UserModel) => {
+    const [userData, setUser] = useState<User>(user);
 
     return (
-        <div>
+        <div className="breadcrumb__wrapper">
             <ul className="breadcrumb">
-                <li><a className={status === 0 ? "active" : ""} href="#1">ADDED</a></li>
-                <li><a className={status === 1 ? "active" : ""} href="#2">INCHECK</a></li>
-                <li><a className={status === 2 ? "active" : ""} href="#3">APPROVED</a></li>
-                <li><a className={status === 3 ? "active" : ""} href="#4">ACTIVE</a></li>
-                <li><a className={status === 4 ? "active" : ""} href="#5">INACTIVE</a></li>
+                {
+                    statusValues.map(value => <StatusBarElement user={userData} targetStatus={value} />)
+                }
             </ul>
         </div>
     )

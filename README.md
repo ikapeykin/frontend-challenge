@@ -1,4 +1,4 @@
-# Frontend-challenge
+# Frontend-challenge description
 
 Workmotion (www.workmotion.com) is a global HR platform enabling companies to hire & onboard their employees internationally, at the push of a button. It is our mission to create opportunities for anyone to work from anywhere. As work is becoming even more global and remote, there has never been a bigger chance to build a truly global HR-tech company.
 
@@ -27,6 +27,12 @@ Your task is to build a frontend application using React / Typescript including 
 
 # Solution description
 
+![This is what stylebar looks like](./readme/statusbar_statements.PNG)
+
+### Useful links:
+[Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
+
+[CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
 
 
 # How to use it

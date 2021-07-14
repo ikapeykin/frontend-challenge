@@ -7,6 +7,10 @@ export interface User {
     status: Status;
 }
 
+export interface UserModel {
+    user: User;
+}
+
 export interface CreateUser {
     name: string;
     avatar_url: string;
@@ -14,7 +18,5 @@ export interface CreateUser {
 
 export interface UpdateUser {
     id: number;
-    name?: string;
-    avatar_url?: string;
-    status?: Status;
+    status: Status;
 }

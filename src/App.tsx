@@ -14,7 +14,7 @@ function App() {
 
     return (
         <div className="App">
-            {data.map(user => <UserContainer {...user} />)}
+            {data.map(user => <UserContainer user={user} />)}
         </div>
     );
 }
