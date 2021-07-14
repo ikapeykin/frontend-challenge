@@ -24,7 +24,12 @@ Your task is to build a frontend application using React / Typescript including 
  
 - In Every employee row, there should be a component as per the provided picture which will be used to display the current state of this employee and by clicking on another state e.g. APPROVED , it should persist that change to this given employee.
 
-## Available Scripts
+
+# Solution description
+
+
+
+# How to use it
 
 In the project directory, you can run:
 

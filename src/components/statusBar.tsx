@@ -10,20 +10,13 @@ export const StatusBar = ({status}: StatusBarProps) => {
     console.log(Status[status]);
 
     return (
-        <div className="statusBar">
-            {/*<ul className="statusBarList">*/}
-            {/*    <li className="statusBarElement firstStatusBarElement">ADDED</li>*/}
-            {/*    <li className="statusBarElement middleStatusBarElement">IN-CHECK</li>*/}
-            {/*    <li className="statusBarElement middleStatusBarElement">APPROVED</li>*/}
-            {/*    <li className="statusBarElement middleStatusBarElement">ACTIVE</li>*/}
-            {/*    <li className="statusBarElement lastStatusBarElement">INACTIVE</li>*/}
-            {/*</ul>*/}
-            <ul className="testStatus">
-                <li className="testStatus">ADDED</li>
-                <li className="testStatusNoGood">IN-CHECK</li>
-                <li className="testStatusNoGood">APPROVED</li>
-                <li className="testStatusNoGood">ACTIVE</li>
-                <li className="testStatus">INACTIVE</li>
+        <div>
+            <ul className="breadcrumb">
+                <li><a className={status === 0 ? "active" : ""} href="#1">ADDED</a></li>
+                <li><a className={status === 1 ? "active" : ""} href="#2">INCHECK</a></li>
+                <li><a className={status === 2 ? "active" : ""} href="#3">APPROVED</a></li>
+                <li><a className={status === 3 ? "active" : ""} href="#4">ACTIVE</a></li>
+                <li><a className={status === 4 ? "active" : ""} href="#5">INACTIVE</a></li>
             </ul>
         </div>
     )

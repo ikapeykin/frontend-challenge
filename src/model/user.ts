@@ -11,3 +11,10 @@ export interface CreateUser {
     name: string;
     avatar_url: string;
 }
+
+export interface UpdateUser {
+    id: number;
+    name?: string;
+    avatar_url?: string;
+    status?: Status;
+}
