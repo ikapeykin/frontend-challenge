@@ -1,5 +1,5 @@
 .userContainer {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-start;
 }
 
