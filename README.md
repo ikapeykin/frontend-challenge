@@ -27,12 +27,17 @@ Your task is to build a frontend application using React / Typescript including 
 
 # Solution description
 
+
+First of all, I considered the StatusBar layout and implemented it as a functional component that uses the User object, changing the state of a particular person. A good tone would be to use Redux/Recoil.
+The implementation of this component includes not only CSS/HTML, but also the application of architectural solutions of the application, the use of type annotation, the implementation of interfaces, solving the problem of data desynchronization in different sections of the frontend application.
+
+![StatusBar Layout](./readme/states.png)
+
 ![Example of interactive status bar](./readme/vid-1626349706437.gif)
-### Useful links:
-[Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
-
-[CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
-
+### Knowledge base:
+- [Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
+- [CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
+- [Lifting state up](reactjs.org/docs/lifting-state-up.html)
 
 # How to use it
 
