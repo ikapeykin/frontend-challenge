@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {User} from "./model/user";
+import {getEmployees} from "./api/mocked";
+import {UserContainer} from "./components/userContainer";
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+    const [data, setData] = useState<User[]>([]);
 
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        const fetched: User[] = getEmployees();
+        setData(fetched);
+    }, [])
+
+    return (
+        <div className="App">
+            {data.map(user => <UserContainer user={user}/>)}
+        </div>
+    );
 }
 
 export default App;
