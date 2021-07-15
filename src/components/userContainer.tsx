@@ -33,8 +33,8 @@ export const UserContainer = ({user}: UserContainerProps) => {
 
     return (
         <div className="userContainer">
-            <h4 className="userContainerElement">{user.name}</h4>
-            <Avatar className="userContainerElement" alt={user.name} src={user.avatar_url}/>
+            {/*<h4 className="userContainerElement">{user.name}</h4>*/}
+            {/*<Avatar className="userContainerElement" alt={user.name} src={user.avatar_url}/>*/}
             <StatusBar
                 userStatus={userData.status}
                 onChangeStatus={(newData) => {

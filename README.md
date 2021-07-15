@@ -27,8 +27,7 @@ Your task is to build a frontend application using React / Typescript including 
 
 # Solution description
 
-![This is what stylebar looks like](./readme/statusbar_statements.PNG)
-
+![Example of interactive status bar](./readme/vid-1626349706437.gif)
 ### Useful links:
 [Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
 
