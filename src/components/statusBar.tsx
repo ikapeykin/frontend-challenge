@@ -1,16 +1,14 @@
-import React, {useState} from "react";
+import React from "react";
 import {StatusBarElement} from "./statusBarElement";
 import {Status, statusValues} from "../model/status";
 import "./statusBar.css";
 
 interface StatusBarProps {
-    userId: number;
     userStatus: Status;
-    updateUserCallback: (() => void);
-    setUserCallback: (() => void);
+    onChangeStatus: ((newStatus: Status) => void);
 }
 
-export const StatusBar = ({userStatus}: StatusBarProps) => {
+export const StatusBar = ({userStatus, onChangeStatus}: StatusBarProps) => {
 
     return (
         <div className="breadcrumb__wrapper">
@@ -20,7 +18,7 @@ export const StatusBar = ({userStatus}: StatusBarProps) => {
                         value => <StatusBarElement
                             userStatus={userStatus}
                             targetStatus={Status[value as keyof typeof Status]}
-                            callback={setUser}
+                            onChangeStatus={onChangeStatus}
                         />
                     )
                 }

@@ -19,8 +19,6 @@ export const postEmployer = (user: CreateUser) => {
 
 export const pathEmployer = (user: UpdateUser) => {
     const userIndex: number = usersMockData.findIndex(userMock => userMock.id === user.id);
-
-    if (userIndex) {
-        usersMockData[userIndex].status = user.status;
-    }
+    // Just join 2 objects
+    usersMockData[userIndex] = {...usersMockData[userIndex], ...user};
 }
