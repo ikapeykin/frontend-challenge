@@ -14,7 +14,6 @@
     background: white;
     position: relative;
     display: block;
-    float: left;
 }
 
 .breadcrumb li a:after {

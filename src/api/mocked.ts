@@ -1,4 +1,4 @@
-import {User, CreateUser, UpdateUser} from "../model/user";
+import {User, CreateUser} from "../model/user";
 import {Status} from "../model/status";
 
 export let usersMockData: User[] = [
@@ -17,7 +17,7 @@ export const postEmployer = (user: CreateUser) => {
     return "ok";
 }
 
-export const pathEmployer = (user: UpdateUser) => {
+export const pathEmployer = (user: User) => {
     const userIndex: number = usersMockData.findIndex(userMock => userMock.id === user.id);
     // Just join 2 objects
     usersMockData[userIndex] = {...usersMockData[userIndex], ...user};

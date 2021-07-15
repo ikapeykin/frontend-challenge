@@ -1,8 +1,15 @@
 .userContainer {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .userContainerElement {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.userContainerAvatar {
+    margin: 0 15px 0 15px;
 }
