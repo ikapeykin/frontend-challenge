@@ -8,9 +8,8 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
 
 // Learn more: https://bit.ly/CRA-vitals
 reportWebVitals(console.log);

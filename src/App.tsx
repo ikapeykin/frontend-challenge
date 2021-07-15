@@ -1,12 +1,11 @@
 import React from 'react';
+import UserContainer from './components/UserContainer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <UserContainer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-# Frontend-challenge
+# Frontend-challenge description
 
 Workmotion (www.workmotion.com) is a global HR platform enabling companies to hire & onboard their employees internationally, at the push of a button. It is our mission to create opportunities for anyone to work from anywhere. As work is becoming even more global and remote, there has never been a bigger chance to build a truly global HR-tech company.
 
@@ -24,7 +24,25 @@ Your task is to build a frontend application using React / Typescript including 
  
 - In Every employee row, there should be a component as per the provided picture which will be used to display the current state of this employee and by clicking on another state e.g. APPROVED , it should persist that change to this given employee.
 
-## Available Scripts
+
+# Solution description
+
+🐥 Play with me: [Interactive demo](https://eloquent-wescoff-d5bbdd.netlify.app/)
+
+First of all, I considered the StatusBar layout and implemented it as a functional component that uses the User object, changing the state of a particular person. A good tone would be to use Redux/Recoil.
+The implementation of this component includes not only CSS/HTML, but also the application of architectural solutions of the application, the use of type annotation, the implementation of interfaces, solving the problem of data desynchronization in different sections of the frontend application.
+
+![StatusBar Layout](./readme/states.png)
+
+![Example of interactive status bar](./readme/vid-1626349706437.gif)
+
+The next step is to develop a custom container that contains a status bar, some information about the user, and interacts with the mocked API.
+How do I save information about each user? I developed it with updating local states and requesting an API. In production
+, of course, these will be asynchronous requests. The syntax of asynchronous functions can be with `async/wait` or `promises`.
+
+![Example of interactive user containers](./readme/vid-1626363080428.gif)
+
+# How to use it
 
 In the project directory, you can run:
 
@@ -50,3 +68,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Knowledge base:
+- [Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
+- [CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
+- [Lifting state up](reactjs.org/docs/lifting-state-up.html)
