@@ -14,7 +14,7 @@ export const StatusBarElement = ({userStatus, targetStatus, onChangeStatus}: Sta
                 href="#"
                 className={userStatus === targetStatus ? "active" : ""}
                 onClick={() => onChangeStatus(targetStatus)}
-            >{targetStatus}</a>
+            >{Status[targetStatus]}</a>
         </li>
     )
 }

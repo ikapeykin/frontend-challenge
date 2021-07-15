@@ -14,10 +14,7 @@ function App() {
 
     return (
         <div className="App">
-            {data.map((user, ind) => <UserContainer updateUser={(newData) => {
-                data[ind] = {...data[ind], ...newData}
-                setData(data)
-            }} user={user}/>)}
+            {data.map(user => <UserContainer user={user}/>)}
         </div>
     );
 }

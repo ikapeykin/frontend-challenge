@@ -26,10 +26,9 @@ import {pathEmployer} from "../api/mocked";
 
 interface UserContainerProps {
     user: User;
-    updateUser: ((user: User) => void);
 }
 
-export const UserContainer = ({user, updateUser}: UserContainerProps) => {
+export const UserContainer = ({user}: UserContainerProps) => {
     const [userData, setUser] = useState<User>(user);
 
     return (
@@ -38,15 +37,9 @@ export const UserContainer = ({user, updateUser}: UserContainerProps) => {
             <Avatar className="userContainerElement" alt={user.name} src={user.avatar_url}/>
             <StatusBar
                 userStatus={userData.status}
-                onChangeStatus={newStatus => {
-                    const userData: UpdateUser = {
-                        id: userData.id,
-                        status: targetStatus,
-                    }
-                    user.status = userData.status;
-                    pathEmployer(userData);
-                    callback(user);
-                    updateUser({targetStatus: newStatus})
+                onChangeStatus={(newData) => {
+                    let data = {...userData, ...{status: newData}}
+                    setUser(data)
                 }}
             />
         </div>
