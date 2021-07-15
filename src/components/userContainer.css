@@ -1,6 +1,15 @@
+.userContainerWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
 .userContainer {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    border-radius: 12px;
+    background-color: #FFF;
 }
 
 .userContainerElement {
@@ -8,8 +17,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 15px 0 15px;
+
 }
 
 .userContainerAvatar {
-    margin: 0 15px 0 15px;
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
 }

@@ -34,10 +34,12 @@ The implementation of this component includes not only CSS/HTML, but also the ap
 ![StatusBar Layout](./readme/states.png)
 
 ![Example of interactive status bar](./readme/vid-1626349706437.gif)
-### Knowledge base:
-- [Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
-- [CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
-- [Lifting state up](reactjs.org/docs/lifting-state-up.html)
+
+The next step is to develop a custom container that contains a status bar, some information about the user, and interacts with the mocked API.
+How do I save information about each user? I developed it with updating local states and requesting an API. In production
+, of course, these will be asynchronous requests. The syntax of asynchronous functions can be with `async/wait` or `promises`.
+
+![Example of interactive user containers](./readme/vid-1626363080428.gif)
 
 # How to use it
 
@@ -65,3 +67,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Knowledge base:
+- [Indicators (demo)](https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/index.html#0)
+- [CSS rounded triangles trick](https://codyhouse.co/blog/post/css-rounded-triangles-with-clip-path)
+- [Lifting state up](reactjs.org/docs/lifting-state-up.html)

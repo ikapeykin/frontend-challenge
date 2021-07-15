@@ -1,5 +1,3 @@
-import {User} from "./user";
-
 // Using this array will preserve the order of the values
 export const statusValues = [
     "ADDED",

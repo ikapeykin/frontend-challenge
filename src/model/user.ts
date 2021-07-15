@@ -6,8 +6,3 @@ export interface User {
     avatar_url: string;
     status: Status;
 }
-
-export interface CreateUser {
-    name: string;
-    avatar_url: string;
-}
