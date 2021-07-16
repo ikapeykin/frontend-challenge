@@ -1,5 +1,5 @@
-import {User} from '../model/user';
-import {Status} from '../model/status';
+import { User } from '../model/user';
+import { Status } from '../model/status';
 
 export const usersMockData: User[] = [
   {
@@ -19,10 +19,9 @@ export const usersMockData: User[] = [
   },
 ];
 
-export const getEmployees = () => [...usersMockData]; // Protecting data from being overwritten by the GET method
+export const getEmployees = () => [...usersMockData];
 
 export const pathEmployer = (user: User) => {
   const userIndex: number = usersMockData.findIndex((userMock) => userMock.id === user.id);
-  // Just join 2 objects
-  usersMockData[userIndex] = {...usersMockData[userIndex], ...user};
+  usersMockData[userIndex] = { ...usersMockData[userIndex], ...user };
 };

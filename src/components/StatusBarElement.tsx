@@ -1,5 +1,5 @@
 import React from 'react';
-import {Status} from '../model/status';
+import { Status } from '../model/status';
 
 interface StatusBarElementProps {
   userStatus: Status;
@@ -7,7 +7,7 @@ interface StatusBarElementProps {
   onChangeStatus: ((newStatus: Status) => void);
 }
 
-export const StatusBarElement = ({userStatus, targetStatus, onChangeStatus}: StatusBarElementProps) => (
+const StatusBarElement = ({ userStatus, targetStatus, onChangeStatus }: StatusBarElementProps) => (
   <li>
     <a
       href="/#"
@@ -18,3 +18,5 @@ export const StatusBarElement = ({userStatus, targetStatus, onChangeStatus}: Sta
     </a>
   </li>
 );
+
+export default StatusBarElement;

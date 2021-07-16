@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import {User} from '../model/user';
-import {StatusBar} from './StatusBar';
-import {pathEmployer} from '../api/mocked';
+import React, { useState } from 'react';
+import { User } from '../model/user';
+import StatusBar from './StatusBar';
+import { pathEmployer } from '../api/mocked';
 import './userContainer.css';
 
 interface UserContainerProps {
   user: User;
 }
 
-export const UserContainer = ({user}: UserContainerProps) => {
+const UserContainer = ({ user }: UserContainerProps) => {
   const [userData, setUser] = useState<User>(user);
 
   return (
@@ -22,7 +22,7 @@ export const UserContainer = ({user}: UserContainerProps) => {
           <StatusBar
             userStatus={userData.status}
             onChangeStatus={(newData) => {
-              const data = {...userData, ...{status: newData}};
+              const data = { ...userData, ...{ status: newData } };
               setUser(data);
               pathEmployer(data);
             }}
@@ -32,3 +32,5 @@ export const UserContainer = ({user}: UserContainerProps) => {
     </div>
   );
 };
+
+export default UserContainer;
