@@ -1,10 +1,10 @@
-.userContainerWrapper {
+.user__container__wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 8px;
 }
 
-.userContainer {
+.user__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -12,7 +12,7 @@
     background-color: #FFF;
 }
 
-.userContainerElement {
+.user__container__element {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -21,7 +21,7 @@
 
 }
 
-.userContainerAvatar {
+.user__container__avatar {
     margin-right: 15px;
     border-radius: 50%;
     width: 45px;

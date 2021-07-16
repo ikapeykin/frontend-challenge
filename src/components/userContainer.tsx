@@ -13,13 +13,13 @@ export const UserContainer = ({user}: UserContainerProps) => {
     const [userData, setUser] = useState<User>(user);
 
     return (
-        <div className="userContainerWrapper">
-            <div className="userContainer">
-                <div className="userContainerElement">
-                    <img className="userContainerAvatar" alt={user.name} src={user.avatar_url}/>
+        <div className="user__container__wrapper">
+            <div className="user__container">
+                <div className="user__container__element">
+                    <img className="user__container__avatar" alt={user.name} src={user.avatar_url}/>
                     <h4>{user.name}</h4>
                 </div>
-                <div className="userContainerElement">
+                <div className="user__container__element">
                     <StatusBar
                         userStatus={userData.status}
                         onChangeStatus={(newData) => {

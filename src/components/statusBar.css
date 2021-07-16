@@ -55,10 +55,10 @@
     padding-right: 10px;
 }
 
-.active {
-    background: #185AD1 !important;
+.breadcrumb li .active {
+    background: #185AD1;
 }
 
-.active:after {
-    border-left-color: #185AD1 !important;
+.breadcrumb li .active:after {
+    border-left-color: #185AD1;
 }
