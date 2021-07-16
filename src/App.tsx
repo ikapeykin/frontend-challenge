@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from "react";
 import {User} from "./model/user";
 import {getEmployees} from "./api/mocked";
 import {UserContainer} from "./components/userContainer";
-import './App.css';
+import "./App.css";
 
 function App() {
     const [data, setData] = useState<User[]>([]);
