@@ -1,5 +1,5 @@
 import React from "react";
-import {StatusBarElement} from "./statusBarElement";
+import {StatusBarElement} from "./StatusBarElement";
 import {Status, statusValues} from "../model/status";
 import "./statusBar.css";
 

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {User} from "../model/user";
-import {StatusBar} from "./statusBar";
+import {StatusBar} from "./StatusBar";
 import {pathEmployer} from "../api/mocked";
 import "./userContainer.css";
 

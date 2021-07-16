@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {User} from "./model/user";
 import {getEmployees} from "./api/mocked";
-import {UserContainer} from "./components/userContainer";
+import {UserContainer} from "./components/UserContainer";
 import "./App.css";
 
 function App() {
