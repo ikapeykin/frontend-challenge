@@ -14,7 +14,19 @@ const UserContainer = () => {
 
   return (
     <div>
-      { data.map((user) => <UserItem user={user} />) }
+      {
+        data.map((user) => (
+          <UserItem
+            user={user}
+            onChangeUser={(newData) => {
+              const userIndex: number = data.findIndex((userData) => userData.id === user.id);
+              const updateUserData = [...data];
+              updateUserData[userIndex] = { ...updateUserData[userIndex], ...newData };
+              setData(updateUserData);
+            }}
+          />
+        ))
+      }
     </div>
   );
 };

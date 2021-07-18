@@ -6,9 +6,10 @@ import './userItem.css';
 
 interface UserItemProps {
   user: User;
+  onChangeUser: ((user: User) => void);
 }
 
-const UserItem = ({ user }: UserItemProps) => {
+const UserItem = ({ user, onChangeUser }: UserItemProps) => {
   const [userData, setUser] = useState<User>(user);
 
   return (
@@ -24,6 +25,7 @@ const UserItem = ({ user }: UserItemProps) => {
             onChangeStatus={(newData) => {
               const data = { ...userData, ...{ status: newData } };
               setUser(data);
+              onChangeUser(data);
               pathEmployer(data);
             }}
           />
