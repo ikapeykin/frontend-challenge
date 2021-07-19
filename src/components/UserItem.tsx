@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User } from '../model/user';
+import { Status } from '../model/status';
 import StatusBar from './StatusBar';
 import { pathEmployer } from '../api/mocked';
 import './userItem.css';
@@ -12,6 +13,13 @@ interface UserItemProps {
 const UserItem = ({ user, onChangeUser }: UserItemProps) => {
   const [userData, setUser] = useState<User>(user);
 
+  const onChangeStatus = (status: Status) => {
+    const data = { ...userData, ...{ status } };
+    setUser(data);
+    onChangeUser(data);
+    pathEmployer(data);
+  };
+
   return (
     <div className="user__item__wrapper">
       <div className="user__item">
@@ -22,12 +30,7 @@ const UserItem = ({ user, onChangeUser }: UserItemProps) => {
         <div className="user__item__element">
           <StatusBar
             userStatus={userData.status}
-            onChangeStatus={(newData) => {
-              const data = { ...userData, ...{ status: newData } };
-              setUser(data);
-              onChangeUser(data);
-              pathEmployer(data);
-            }}
+            onChangeStatus={onChangeStatus}
           />
         </div>
       </div>
