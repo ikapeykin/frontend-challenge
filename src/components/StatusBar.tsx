@@ -15,6 +15,7 @@ const StatusBar = ({ userStatus, onChangeStatus }: StatusBarProps) => (
         statusValues.map(
           (value) => (
             <StatusBarElement
+              key={value}
               userStatus={userStatus}
               targetStatus={Status[value as keyof typeof Status]}
               onChangeStatus={onChangeStatus}

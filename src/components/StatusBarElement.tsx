@@ -8,7 +8,7 @@ interface StatusBarElementProps {
 }
 
 const StatusBarElement = ({ userStatus, targetStatus, onChangeStatus }: StatusBarElementProps) => (
-  <li key={targetStatus}>
+  <li>
     <a
       href="/#"
       className={userStatus === targetStatus ? 'active' : ''}
