@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { User } from '../model/user';
 import UserItem from './UserItem';
 import { getEmployees } from '../api/mocked';
-import './userContainer.css';
 
 const UserContainer = () => {
   const [data, setData] = useState<User[]>([]);
@@ -13,7 +12,7 @@ const UserContainer = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {
         data.map((user) => (
           <UserItem
@@ -22,7 +21,7 @@ const UserContainer = () => {
           />
         ))
       }
-    </div>
+    </>
   );
 };
 

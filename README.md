@@ -42,6 +42,16 @@ How do I save information about each user? I developed it with updating local st
 
 ![Example of interactive user containers](./readme/vid-1626363080428.gif)
 
+To avoid bug with scroll when clicking on <a> element, I used prevent-default trick:
+
+![Code of status bar handler](./readme/statusbar_handler.PNG)
+
+## Improve render performance 
+
+Only one component is re-rendered for each click:
+
+![Component re-renders](./readme/vid-1626791436756.gif)
+
 # How to use it
 
 In the project directory, you can run:
