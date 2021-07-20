@@ -19,11 +19,13 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0 15px 0 15px;
+}
 
+.user__item__element > *:not(:last-child) {
+    margin-right: 7px;
 }
 
 .user__item__avatar {
-    margin-right: 15px;
     border-radius: 50%;
     width: 45px;
     height: 45px;
