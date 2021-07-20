@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { User } from '../model/user';
 import { Status } from '../model/status';
 import StatusBar from './StatusBar';
@@ -7,16 +7,14 @@ import './userItem.css';
 
 interface UserItemProps {
   user: User;
-  onChangeUser: ((user: User) => void);
 }
 
-const UserItem = ({ user, onChangeUser }: UserItemProps) => {
+const UserItem = ({ user }: UserItemProps) => {
   const [userData, setUser] = useState<User>(user);
 
   const onChangeStatus = (status: Status) => {
-    const data = { ...userData, ...{ status } };
+    const data = { ...userData, status };
     setUser(data);
-    onChangeUser(data);
     pathEmployer(data);
   };
 
@@ -38,4 +36,4 @@ const UserItem = ({ user, onChangeUser }: UserItemProps) => {
   );
 };
 
-export default UserItem;
+export default memo(UserItem);
